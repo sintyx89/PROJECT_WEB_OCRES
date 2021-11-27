@@ -11,3 +11,48 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.App-header {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.mainContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+  min-width: 300px;
+  max-width: 900px;
+  margin: auto;
+  margin-top: 20px;
+}
+
+.nav {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.barreRecherche {
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+  min-width: 500px;
+  max-width: 1500px;
+  margin: auto;
+  margin-top: 20px;
+}
+
+.profileInfos {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.profileInfo {
+  min-width: 50%;
+  margin-bottom: 40px;
+}
