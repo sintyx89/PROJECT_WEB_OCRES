@@ -2,6 +2,7 @@ import React from 'react';
 import User from './components/user';
 import Nav from './containers/nav';
 import './App.css';
+import Pokemon from './components/pokemon';
 
 export default class App extends React.Component {
   constructor(props){
@@ -35,7 +36,7 @@ export default class App extends React.Component {
   }
 
    render() {
-    const { users, selectedUser } = this.state;
+    const { users, selectedUser, pokemons } = this.state;
 
     return (
       <div class='App'>
@@ -55,7 +56,7 @@ export default class App extends React.Component {
           </div>
 
           <div class='pokedexInfo'>
-            
+            <Pokemon />
           </div>
           
           <div class='profilDresseur'>
