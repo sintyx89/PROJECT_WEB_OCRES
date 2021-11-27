@@ -46,7 +46,7 @@ export default class App extends React.Component {
         
         <div class='mainContent'>
           <div class='barreRecherche'>
-          <h2> Recherche </h2> 
+          <h2> Recherche Pokémon </h2> 
             <input 
               type='text'
               name='Pokemon'
