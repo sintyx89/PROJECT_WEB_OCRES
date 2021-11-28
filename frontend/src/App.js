@@ -55,7 +55,7 @@ export default class App extends React.Component {
               value={this.selectedPokemon}
             />
             <div class='pokedexInfo'>
-              
+              <Pokemon pokemons/>
             </div>
           </div>
           
