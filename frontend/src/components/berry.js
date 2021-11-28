@@ -15,15 +15,23 @@ export default class Berry extends React.Component {
     }
 
     render () {
-        const {berry} = this.props;
+        let berry = this.state;
 
         return (
             <div class='berry'>
                 <div class='profileInfos'>
                     <div class='profileInfo'>
-                        {`Prenom: ${berry.name}`}
+                        {`Nom: ${berry.name}`}
                     </div>
-                    
+                    <div class='profileInfo'>
+                        {`Temps de pousse: ${berry.growth_time} h`}
+                    </div>
+                    <div class='profileInfo'>
+                        {`Nombre de récolte: ${berry.max_harvest}`}
+                    </div>
+                    <div class='profileInfo'>
+                        {`Puissance de Natural Gift: ${berry.natural_gift_power}`}
+                    </div>
                 </div>
             </div>
         )
