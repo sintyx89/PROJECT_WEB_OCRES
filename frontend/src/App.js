@@ -5,6 +5,8 @@ import './App.css';
 import GuideMeteo from './containers/guideMeteo';
 import Pokedex from './containers/pokedex';
 
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 export default class App extends React.Component {
   constructor(props){
     super(props);
