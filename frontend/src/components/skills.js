@@ -7,25 +7,39 @@ export default class Skill extends React.Component {
         super(props);
 
         this.state = {
-            name : 'name',
-            accuracy : '0',
-            pp : '1',
-            priority : '0',
-            power : '0',
+            name : 'vive-attaque',
+            accuracy : '100',
+            pp : '20',
+            priority : '8',
+            power : '30',
             type : 'fight'
         }
     }
 
     render () {
-        const {skill} = this.props;
+        let skill = this.state;
 
         return (
             <div class='berry'>
                 <div class='profileInfos'>
                     <div class='profileInfo'>
-                        {`Prenom: ${skill.name}`}
+                        {`Nom: ${skill.name}`}
                     </div>
-                    
+                    <div class='profileInfo'>
+                        {`Précision: ${skill.accuracy}`}
+                    </div>
+                    <div class='profileInfo'>
+                        {`PP: ${skill.pp}`}
+                    </div>
+                    <div class='profileInfo'>
+                        {`Priorité: ${skill.priority}/8`}
+                    </div>
+                    <div class='profileInfo'>
+                        {`Power: ${skill.power}`}
+                    </div>
+                    <div class='profileInfo'>
+                        {`Type: ${skill.type}`}
+                    </div>
                 </div>
             </div>
         )
