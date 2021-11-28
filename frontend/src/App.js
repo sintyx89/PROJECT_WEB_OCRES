@@ -2,8 +2,8 @@ import React from 'react';
 import User from './components/user';
 import Nav from './containers/nav';
 import './App.css';
-import Pokemon from './components/pokemon';
 import GuideMeteo from './containers/guideMeteo';
+import Pokedex from './containers/pokedex';
 
 export default class App extends React.Component {
   constructor(props){
@@ -47,16 +47,9 @@ export default class App extends React.Component {
         </header> 
         
         <div class='mainContent'>
-          <div class='barreRecherche'>
-          <h2> Recherche Pokémon </h2> 
-            <input 
-              type='text'
-              name='Pokemon'
-              value={this.selectedPokemon}
-            />
-            <div class='pokedexInfo'>
-              <Pokemon pokemons/>
-            </div>
+          
+          <div class='pokedexInfo'>
+            <Pokedex/>
           </div>
           
           <div class='profilDresseur'>

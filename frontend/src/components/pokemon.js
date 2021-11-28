@@ -1,18 +1,22 @@
 import React from 'react';
 import '../index.css';
 
+const API_URL = "";
+
 export default class Pokemon extends React.Component {
-    state = {
-        name : 'Pikachu',
-        height : '0',
-        weight : '1',
-        type : 'electric'
-    };
+    constructor(props) {
+        super(props);
 
-
+        this.state = {
+            name : 'Pikachu',
+            height : '0,4',
+            weight : '7,0',
+            type : 'electric'
+        }
+    }
     
     render () {
-        const { pokemon } = this.props;
+        let pokemon = this.state;
 
         return (
             <div class='Pokemon'>
@@ -20,10 +24,10 @@ export default class Pokemon extends React.Component {
                     {`Nom : ${pokemon.name}`}
                 </div>
                 <div class='infoPokemon'>
-                    {`Taille : ${pokemon.height}`}
+                    {`Taille : ${pokemon.height} m`}
                 </div>
                 <div class='infoPokemon'>
-                    {`Poids : ${pokemon.weight}`}
+                    {`Poids : ${pokemon.weight} kg`}
                 </div>
                 <div class='infoPokemon'>
                     {`Type : ${pokemon.type}`}
