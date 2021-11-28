@@ -1,13 +1,14 @@
 import React from 'react';
 import Berry from '../components/berry';
 import Pokemon from '../components/pokemon';
+import Item from '../components/item';
 import '../index.css';
 
 export default class Pokedex extends React.Component {
     
 
     render() {
-        const { pokemons, berrys,selectedPokemon,selectedBerry } = this.props;
+        const { pokemons, berrys, items, selectedPokemon, selectedBerry, selectedItem } = this.props;
 
         return (
             <div>
@@ -32,6 +33,18 @@ export default class Pokedex extends React.Component {
                     />
                     <div class='berryInfo'>
                         <Berry berrys/>
+                    </div>
+                </div>
+
+                <div class="Items">
+                    <h2> Recherche Object </h2> 
+                    <input 
+                        type='text'
+                        name='Item'
+                        value={this.selectedItem}
+                    />
+                    <div class='itemInfo'>
+                        <Item items/>
                     </div>
                 </div>
 
