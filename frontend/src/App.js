@@ -3,6 +3,7 @@ import User from './components/user';
 import Nav from './containers/nav';
 import './App.css';
 import Pokemon from './components/pokemon';
+import GuideMeteo from './containers/guideMeteo';
 
 export default class App extends React.Component {
   constructor(props){
@@ -36,7 +37,7 @@ export default class App extends React.Component {
   }
 
    render() {
-    const { users, selectedUser, pokemons } = this.state;
+    const { users, selectedUser, pokemons, city } = this.state;
 
     return (
       <div class='App'>
@@ -56,12 +57,23 @@ export default class App extends React.Component {
           </div>
 
           <div class='pokedexInfo'>
-            <Pokemon />
+            
           </div>
           
           <div class='profilDresseur'>
             <h2> Profil dresseur </h2>
             <User user={users.find((user) => user.name === selectedUser)}/>
+          </div>
+
+          <div class='GuideMeteoGO'>
+            <h2> Guide Méteo pour jouer à GO </h2>
+            <input
+              type="text"
+              name="Ville"
+              value={city}
+              onChange={this.handleChange}
+            />
+            <GuideMeteo city={city} />
           </div>
           
         </div>

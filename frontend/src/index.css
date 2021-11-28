@@ -56,3 +56,15 @@ code {
   min-width: 50%;
   margin-bottom: 40px;
 }
+
+.Pokemon {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.infoPokemon{
+  min-width: 50%;
+  margin-bottom: 40px;
+}

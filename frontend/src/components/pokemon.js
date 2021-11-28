@@ -12,7 +12,7 @@ export default class Pokemon extends React.Component {
 
     
     render () {
-        const {pokemon} = this.props;
+        const { pokemon } = this.props;
 
         return (
             <div class='Pokemon'>
