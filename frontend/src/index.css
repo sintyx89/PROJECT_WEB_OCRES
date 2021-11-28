@@ -57,14 +57,53 @@ code {
   margin-bottom: 40px;
 }
 
-.Pokemon {
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
-  margin-top: 20px;
+.PokemonR{
+  text-align: left;
+  padding: 10px;
+  margin:10px;
+  border: 4mm ridge rgba(170, 50, 220, .6);
+}
+
+.Berry{
+  text-align: left;
+  padding: 10px;
+  margin:10px;
+  border: 4mm ridge rgba(50, 75, 220, 0.6);
+}
+
+.Items{
+  text-align: left;
+  padding: 10px;
+  margin:10px;
+  border: 4mm ridge rgba(50, 195, 220, 0.6);
+}
+
+.Skill{
+  text-align: left;
+  padding: 10px;
+  margin:10px;
+  border: 4mm ridge rgba(50, 220, 64, 0.6);
 }
 
 .infoPokemon{
   min-width: 50%;
   margin-bottom: 40px;
+}
+
+.container {
+  background-color: #626d81;
+}
+
+.profilDresseur {
+  text-align: left;
+  padding: 10px;
+  margin:10px;
+  border: 4mm ridge rgba(220, 50, 50, 0.6);
+}
+
+.GuideMeteoGO {
+  text-align: left;
+  padding: 10px;
+  margin:10px;
+  border: 4mm ridge rgba(217, 220, 50, 0.6);
 }

@@ -13,7 +13,7 @@ export default class Pokedex extends React.Component {
 
         return (
             <div>
-                <div class='Pokemon'>
+                <div class='PokemonR'>
                     <h2> Recherche Pokémon </h2> 
                     <input 
                         type='text'

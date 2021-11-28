@@ -7,6 +7,8 @@ import Pokedex from './containers/pokedex';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+
+
 export default class App extends React.Component {
   constructor(props){
     super(props);
@@ -43,34 +45,43 @@ export default class App extends React.Component {
 
     return (
       <div class='App'>
-        <header class='App-header'>
-          <h1> Notre super POKEDEX version OCRES </h1>
-          <Nav users={users} changeUser={this.changeUser.bind(this)} />
-        </header> 
-        
-        <div class='mainContent'>
+        <div class="container">
+          <header class='App-header'>
+            <h1> Notre super POKEDEX version OCRES </h1>
+            <Nav users={users} changeUser={this.changeUser.bind(this)} />
+          </header> 
           
-          <div class='pokedexInfo'>
-            <Pokedex/>
-          </div>
-          
-          <div class='profilDresseur'>
-            <h2> Profil dresseur </h2>
-            <User user={users.find((user) => user.name === selectedUser)}/>
-          </div>
+          <div class='mainContent'>
+            <div class="row">
+              <div class="col">
+            <div class='profilDresseur'>
+                <h2> Profil dresseur </h2>
+                <User user={users.find((user) => user.name === selectedUser)}/>
+              </div>
+              </div>
 
-          <div class='GuideMeteoGO'>
-            <h2> Guide Méteo pour jouer à GO </h2>
-            <input
-              type="text"
-              name="Ville"
-              value={city}
-              onChange={this.handleChange}
-            />
-            <GuideMeteo city={city} />
+              <div class="col">
+              <div class='pokedexInfo'>
+                <Pokedex/>
+              </div>
+              </div>
+              
+              <div class="col">
+              <div class='GuideMeteoGO'>
+                <h2> Guide Méteo pour jouer à GO </h2>
+                <input
+                  type="text"
+                  name="Ville"
+                  value={city}
+                  onChange={this.handleChange}
+                />
+                <GuideMeteo city={city} />
+              </div>
+              </div>
+              
+              </div>
+            </div>
           </div>
-          
-        </div>
       </div>
     );
    }
