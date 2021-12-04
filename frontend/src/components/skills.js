@@ -7,38 +7,44 @@ export default class Skill extends React.Component {
         super(props);
 
         this.state = {
-            name : 'vive-attaque',
-            accuracy : '100',
-            pp : '20',
-            priority : '8',
-            power : '30',
-            type : 'fight'
+            name: 'vive-attaque',
+            accuracy: '100',
+            pp: '20',
+            priority: '8',
+            power: '30',
+            type: 'fight'
         }
     }
 
-    render () {
+    render() {
         let skill = this.state;
 
         return (
             <div class='berry'>
-                <div class='profileInfos'>
-                    <div class='profileInfo'>
-                        {`Nom: ${skill.name}`}
+                <div class='profileInfos container' id="pokemon">
+                    <div class='row'>
+                        <div class='profileInfo'>
+                            {`Nom: ${skill.name}`}
+                        </div>
+                        <div class='profileInfo'>
+                            {`Précision: ${skill.accuracy}`}
+                        </div>
                     </div>
-                    <div class='profileInfo'>
-                        {`Précision: ${skill.accuracy}`}
+                    <div class='row'>
+                        <div class='profileInfo'>
+                            {`PP: ${skill.pp}`}
+                        </div>
+                        <div class='profileInfo'>
+                            {`Priorité: ${skill.priority}/8`}
+                        </div>
                     </div>
-                    <div class='profileInfo'>
-                        {`PP: ${skill.pp}`}
-                    </div>
-                    <div class='profileInfo'>
-                        {`Priorité: ${skill.priority}/8`}
-                    </div>
-                    <div class='profileInfo'>
-                        {`Power: ${skill.power}`}
-                    </div>
-                    <div class='profileInfo'>
-                        {`Type: ${skill.type}`}
+                    <div class='row'>
+                        <div class='profileInfo'>
+                            {`Power: ${skill.power}`}
+                        </div>
+                        <div class='profileInfo'>
+                            {`Type: ${skill.type}`}
+                        </div>
                     </div>
                 </div>
             </div>
