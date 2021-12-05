@@ -20,33 +20,37 @@ export default class Skill extends React.Component {
         let skill = this.state;
 
         return (
-            <div class='berry'>
-                <div class='profileInfos container' id="pokemon">
-                    <div class='row'>
-                        <div class='profileInfo'>
-                            {`Nom: ${skill.name}`}
-                        </div>
-                        <div class='profileInfo'>
-                            {`Précision: ${skill.accuracy}`}
-                        </div>
+            <div class='berry container' id="pokemon">
+
+                <div class='row'>
+                    <div class='profileInfo col-auto'>
+                        {`Nom: ${skill.name}`}
                     </div>
-                    <div class='row'>
-                        <div class='profileInfo'>
-                            {`PP: ${skill.pp}`}
-                        </div>
-                        <div class='profileInfo'>
-                            {`Priorité: ${skill.priority}/8`}
-                        </div>
-                    </div>
-                    <div class='row'>
-                        <div class='profileInfo'>
-                            {`Power: ${skill.power}`}
-                        </div>
-                        <div class='profileInfo'>
-                            {`Type: ${skill.type}`}
-                        </div>
+                    <div class='profileInfo col-auto'>
+                        {`Power: ${skill.power}`}
+
                     </div>
                 </div>
+                <div class='row'>
+                    <div class='profileInfo col-auto'>
+                        {`Type: ${skill.type}`}
+
+                    </div>
+                    <div class='profileInfo col-auto'>
+                        {`PP: ${skill.pp}`}
+
+                    </div>
+                </div>
+                <div class='row'>
+                    <div class='profileInfo col-auto'>
+                        {`Précision: ${skill.accuracy}`}
+
+                    </div>
+                    <div class='profileInfo col-auto'>
+                        {`Priorité: ${skill.priority}/8`}
+                    </div>
+                </div>
+
             </div>
         )
     }

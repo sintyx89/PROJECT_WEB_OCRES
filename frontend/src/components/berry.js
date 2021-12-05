@@ -17,21 +17,26 @@ export default class Berry extends React.Component {
     render() {
         let berry = this.state;
 
-        return ( <
-            div class = 'berry' >
-            <
-            div class = 'profileInfos' >
-            <
-            div class = 'profileInfo' > { `Nom: ${berry.name}` } <
-            /div> <
-            div class = 'profileInfo' > { `Temps de pousse: ${berry.growth_time} h` } <
-            /div> <
-            div class = 'profileInfo' > { `Nombre de récolte: ${berry.max_harvest}` } <
-            /div> <
-            div class = 'profileInfo' > { `Puissance de Natural Gift: ${berry.natural_gift_power}` } <
-            /div> <
-            /div> <
-            /div>
+        return (
+            <div class='berry container' id='pokemon'>
+                <div class='row'>
+                    <div class='profileInfo col-auto'>
+                        {`Nom: ${berry.name}`}
+                    </div>
+                    <div class='profileInfo col-auto'>
+                        {`Temps de pousse: ${berry.growth_time} h`}
+                    </div>
+                </div>
+                <div class='row'>
+                    <div class='profileInfo col-auto'>
+                        {`Nombre de récolte: ${berry.max_harvest}`}
+                    </div>
+                    <div class='profileInfo col-auto'>
+                        {`Puissance : ${berry.natural_gift_power}`}
+                    </div>
+                </div>
+
+            </div>
         )
     }
 

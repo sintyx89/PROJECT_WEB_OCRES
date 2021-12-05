@@ -15,7 +15,7 @@ export default class Pokedex extends React.Component {
             <div class='container'>
                 <div class='row'>
 
-                    <div class='headshot headshot-1'>
+                    <div class='headshot headshot-pok'>
                         <div class="PokemonR ">
 
                             <h2> Recherche Pokémon </h2>
@@ -32,9 +32,7 @@ export default class Pokedex extends React.Component {
                 </div>
 
                 <div class='row'>
-                    <div class='headshot headshot-1'>
-
-
+                    <div class='headshot headshot-ber'>
 
                         <div class="Berry ">
 
@@ -52,7 +50,7 @@ export default class Pokedex extends React.Component {
                 </div>
 
                 <div class='row'>
-                    <div class='headshot headshot-1'>
+                    <div class='headshot headshot-mov'>
                         <div class="Items ">
                             <h2> Recherche Object </h2>
                             <input
@@ -68,7 +66,7 @@ export default class Pokedex extends React.Component {
                 </div>
 
                 <div class='row'>
-                    <div class='headshot headshot-1'>
+                    <div class='headshot headshot-skill'>
                         <div class="Skill ">
                             <h2> Recherche Attaque/Move </h2>
                             <input

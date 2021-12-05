@@ -8,35 +8,35 @@ export default class Pokemon extends React.Component {
         super(props);
 
         this.state = {
-            name : 'Pikachu',
-            height : '0,4',
-            weight : '7,0',
-            type : 'electric'
+            name: 'Pikachu',
+            height: '0,4',
+            weight: '7,0',
+            type: 'electric'
         }
     }
-    
-    render () {
+
+    render() {
         let pokemon = this.state;
 
         return (
             <div class='Pokemon container' id='pokemon'>
                 <div class='row'>
-                <div class='infoPokemon col-auto'>
-                    {`Nom : ${pokemon.name}`}
-                </div>
-                <div class='infoPokemon col-auto'>
-                    {`Taille : ${pokemon.height} m`}
-                </div>
+                    <div class='infoPokemon col-auto'>
+                        {`Nom : ${pokemon.name}`}
+                    </div>
+                    <div class='infoPokemon col-auto'>
+                        {`Taille : ${pokemon.height} m`}
+                    </div>
                 </div>
                 <div class='row'>
-                <div class='infoPokemon col-auto'>
-                    {`Poids : ${pokemon.weight} kg`}
+                    <div class='infoPokemon col-auto'>
+                        {`Poids : ${pokemon.weight} kg`}
+                    </div>
+                    <div class='infoPokemon col-auto'>
+                        {`Type : ${pokemon.type}`}
+                    </div>
                 </div>
-                <div class='infoPokemon col-auto'>
-                    {`Type : ${pokemon.type}`}
-                </div>
-            </div>
             </div>
         );
     }
-} 
+}

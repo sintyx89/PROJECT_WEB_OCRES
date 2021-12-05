@@ -8,31 +8,34 @@ export default class Item extends React.Component {
 
         this.state = {
             name: 'Potion',
-            cost : '200',
-            attributes : 'permet de restaurer 20 PV',
-            category : 'Soin'
+            cost: '200',
+            attributes: 'restaure 20 PV',
+            category: 'Soin'
         }
     }
 
-    render () {
+    render() {
         let item = this.state;
 
         return (
-            <div class='berry'>
-                <div class='profileInfos'>
-                    <div class='profileInfo'>
+            <div class='berry container' id='pokemon'>
+                <div class='row'>
+                    <div class='profileInfo col-auto'>
                         {`Nom: ${item.name}`}
                     </div>
-                    <div class='profileInfo'>
+                    <div class='profileInfo col-auto'>
                         {`Prix: ${item.cost} `}
                     </div>
-                    <div class='profileInfo'>
+                </div>
+                <div class='row'>
+                    <div class='profileInfo col-auto'>
                         {`Attribut: ${item.attributes}`}
                     </div>
-                    <div class='profileInfo'>
+                    <div class='profileInfo col-auto'>
                         {`Catégorie: ${item.category}`}
                     </div>
                 </div>
+
             </div>
         )
     }
