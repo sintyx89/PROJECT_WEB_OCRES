@@ -31,13 +31,17 @@ export default class App extends React.Component {
     }
   }
 
+  handleChange = event => {
+    this.setState({ city: event.target.value });
+  };
+
   changeUser(selectedUser) {
     this.setState({ selectedUser });
     // Revient a faire => this.setState({ selectedUser: selectedUser }); 
   }
 
    render() {
-    const { users, selectedUser, pokemons, city } = this.state;
+    let { users, selectedUser, pokemons, city } = this.state;
 
     return (
       <div class='App'>

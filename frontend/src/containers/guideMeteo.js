@@ -5,6 +5,7 @@ import "../App.css";
 
 const API_URL = "http://api.openweathermap.org/data/2.5/forecast";
 const API_KEY = "768a35a09a1701be84498950a95e7cf5";
+const API_KEY2 = "44df947c43958d2ce1cb7a4ba9123b2a8";
 
 export default class GuideMeteo extends React.Component {
     constructor(props) {
@@ -23,9 +24,9 @@ export default class GuideMeteo extends React.Component {
             // Recupere uniquement la propriété data
             const { list } = data;
             // On prend les trois premières heures de chaque jour (donc de 0-3h))
-            const guideMeteo = [list[0], list[9], list[17], list[25], list[33]];
+            const forecast = [list[0], list[9], list[17], list[25], list[33]];
     
-            this.setState({ guideMeteo });
+            this.setState({ forecast });
           })
           .catch(console.error);
       };
@@ -39,8 +40,8 @@ export default class GuideMeteo extends React.Component {
     // A chaque update relance une api
     componentDidUpdate(nextProps) {
       // Ici on verifie que la mise à jour concerne bien le champs city
-      if (nextProps.city !== this.props.city) {
-        this.callAPI(nextProps.city);
+      if (nextProps !== this.props.city) {
+        this.callAPI(nextProps);
       }
     }
 
@@ -56,11 +57,11 @@ export default class GuideMeteo extends React.Component {
               {forecast.map((forecastData, index) => {
                 return <Meteo key={index} data={forecastData} />;
               })}
-              {/* <Day data={forecast[0]}/>
-              <Day data={forecast[1]}/>
-              <Day data={forecast[2]}/>
-              <Day data={forecast[3]}/>
-              <Day data={forecast[4]}/> */}
+              {/* <Meteo data={forecast[0]}/>,
+              <Meteo data={forecast[1]}/>,
+              <Meteo data={forecast[2]}/>,
+              <Meteo data={forecast[3]}/>,
+              <Meteo data={forecast[4]}/> */}
             </div>
           </div>
         );
