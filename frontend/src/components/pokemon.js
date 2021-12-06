@@ -1,36 +1,39 @@
 import React from 'react';
+import axios from "axios";
 import '../index.css';
 
 const API_URL = "";
 
 export default class Pokemon extends React.Component {
-    constructor(props) {
-        super(props);
-
-        this.state = {
-            name : 'Pikachu',
-            height : '0,4',
-            weight : '7,0',
-            type : 'electric'
-        }
-    }
     
     render () {
-        let pokemon = this.state;
+        
+        // utilise la props (les data de l'API), les affiche, teste qu'elles sont récupéré
+        const { data } = this.props;
+        console.log("data", data);
+        if (!data) return null;
+        
+        // get API data
+        const { name } = data.name;
+        const { height } = data.height;
+        const { weight } = data.weight;
+        const { type } = data.types[0].type;
+        
 
+        // affichage des infos
         return (
             <div class='Pokemon'>
                 <div class='infoPokemon'>
-                    {`Nom : ${pokemon.name}`}
+                    {`Nom : ${name}`}
                 </div>
                 <div class='infoPokemon'>
-                    {`Taille : ${pokemon.height} m`}
+                    {`Taille : ${height} m`}
                 </div>
                 <div class='infoPokemon'>
-                    {`Poids : ${pokemon.weight} kg`}
+                    {`Poids : ${weight} kg`}
                 </div>
                 <div class='infoPokemon'>
-                    {`Type : ${pokemon.type}`}
+                    {`Type : ${type}`}
                 </div>
             </div>
         );
