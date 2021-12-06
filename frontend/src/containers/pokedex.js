@@ -11,7 +11,10 @@ export default class Pokedex extends React.Component {
         super(props);
     
         this.state ={
-        pokemon : 'pikachu'
+        pokemon : 'pikachu',
+        berry : '', 
+        item : '', 
+        skill : ''
         }
     }
 

@@ -6,7 +6,6 @@ import '../index.css';
 
 
 const API_URL = "https://pokeapi.co/api/v2/pokemon";
-const API_KEY = "";
 
 export default class FichePokemon extends React.Component {
     constructor(props) {
@@ -51,7 +50,7 @@ export default class FichePokemon extends React.Component {
         if (!dataPoke) return <p>Loading...</p>;
         return (
           <div>
-              {dataPoke.map((dataPokeData) => {
+              {dataPoke.map((dataPoke) => {
                 return <Pokemon data={dataPoke} />;
               })}
           </div>
