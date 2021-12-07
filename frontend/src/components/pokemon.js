@@ -7,7 +7,7 @@ export default class Pokemon extends React.Component {
         
         // utilise la props (les data de l'API), les affiche, teste qu'elles sont récupéré
         const { data } = this.props;
-        console.log("data", data);
+        //console.log("data", data);
         if (!data) return null;
         
         // get API data
@@ -17,8 +17,6 @@ export default class Pokemon extends React.Component {
         const sprite = data.data.sprites.front_default;
         const type = data.data.types[0].type.name;
        
-        
-
         // affichage des infos
         return (
             <div class='Pokemon'>

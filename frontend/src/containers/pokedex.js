@@ -1,21 +1,33 @@
 import React from 'react';
-import Berry from '../components/berry';
-import Pokemon from '../components/pokemon';
-import Item from '../components/item';
 import Skill from '../components/skills';
 import '../index.css';
-import FichePokemon from './DataPokedex';
+import FichePokemon from './FichePokemon';
+import FicheBerry from './FicheBerry';
+import FicheItem from './FicheItem';
+import FicheSkill from './FicheSkill';
 
 export default class Pokedex extends React.Component {
     state ={
         pokemon : 'pikachu',
-        berry : '', 
-        item : '', 
-        skill : ''
+        berry : 'sitrus', 
+        item : 'leftovers', 
+        skill : 'flamethrower'
     };
 
     handleChangePokemon = event => {
         this.setState({ pokemon : event.target.value });
+    };
+
+    handleChangeBerry = event => {
+        this.setState({ berry : event.target.value });
+    };
+
+    handleChangeItem = event => {
+        this.setState({ item : event.target.value });
+    };
+
+    handleChangeSkill = event => {
+        this.setState({ skill : event.target.value });
     };
 
     render() {
@@ -40,11 +52,12 @@ export default class Pokedex extends React.Component {
                     <h2> Recherche Berry </h2> 
                     <input 
                         type='text'
-                        name='Berry'
-                        value={berry}
+                        name='berry'
+                        value={ berry }
+                        onChange={ this.handleChangeBerry }
                     />
                     <div class='berryInfo'>
-                        <Berry berry/>
+                       {/*<FicheBerry name={ berry } />*/} 
                     </div>
                 </div>
 
@@ -52,11 +65,12 @@ export default class Pokedex extends React.Component {
                     <h2> Recherche Object </h2> 
                     <input 
                         type='text'
-                        name='Item'
-                        value={item}
+                        name='item'
+                        value={ item }
+                        onChange={ this.handleChangeItem }
                     />
                     <div class='itemInfo'>
-                        <Item item/>
+                        <FicheItem name={ item }/>
                     </div>
                 </div>
 
@@ -65,10 +79,11 @@ export default class Pokedex extends React.Component {
                     <input 
                         type='text'
                         name='skill'
-                        value={skill}
+                        value={ skill }
+                        onChange={ this.handleChangeSkill }
                     />
                     <div class='skillInfo'>
-                        <Skill skill/>
+                        <FicheSkill name={ skill }/>
                     </div>
                 </div>
 
