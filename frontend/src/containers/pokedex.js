@@ -7,23 +7,19 @@ import '../index.css';
 import FichePokemon from './DataPokedex';
 
 export default class Pokedex extends React.Component {
-    constructor(props){
-        super(props);
-    
-        this.state ={
+    state ={
         pokemon : 'pikachu',
         berry : '', 
         item : '', 
         skill : ''
-        }
-    }
+    };
 
     handleChangePokemon = event => {
-        this.setState({ pokemon: event.target.value });
-      };
+        this.setState({ pokemon : event.target.value });
+    };
 
     render() {
-        const { pokemon, berry, item, skill } = this.props;
+        let {pokemon, berry, item, skill} = this.state;
 
         return (
             <div>
@@ -31,12 +27,12 @@ export default class Pokedex extends React.Component {
                     <h2> Recherche Pokémon </h2> 
                     <input 
                         type='text'
-                        name='pokemon'
-                        value={pokemon}
-                        onChange={this.handleChangePokemon}
+                        name= 'pokemon'
+                        value={ pokemon }
+                        onChange={ this.handleChangePokemon }
                     />
                     <div class='pokemonInfo'>
-                        <FichePokemon name={pokemon} />
+                        <FichePokemon name={ pokemon } />
                     </div>
                 </div>
 

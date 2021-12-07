@@ -6,10 +6,7 @@ import GuideMeteo from './containers/guideMeteo';
 import Pokedex from './containers/pokedex';
 
 export default class App extends React.Component {
-  constructor(props){
-    super(props);
-
-    this.state = {
+  state = {
       users : [
         {
           name: 'Margaux',
@@ -26,10 +23,8 @@ export default class App extends React.Component {
       ],
 
       selectedUser : 'Margaux',
-      selectedPokemon : 'Pikachu',
       city : 'Paris'
     }
-  }
 
   handleChange = event => {
     this.setState({ city: event.target.value });

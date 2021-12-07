@@ -3,7 +3,17 @@ import axios from "axios";
 import Pokemon from '../components/pokemon';
 import "../App.css";
 import '../index.css';
-
+/*
+import Pokedex from 'pokedex-promise-v2';
+const options = {
+  protocol: 'https',
+  hostName: 'localhost:443',
+  versionPath: '/api/v2/',
+  cacheLimit: 100 * 1000, // 100s
+  timeout: 5 * 1000 // 5s
+}
+const P = new Pokedex(options);
+*/
 
 const API_URL = "https://pokeapi.co/api/v2/pokemon";
 
@@ -21,10 +31,8 @@ export default class FichePokemon extends React.Component {
           .then(({ data }) => {
             console.log(data);
             // Recupere uniquement la propriété data
-            // const { list } = data;
-            // On prend les data en question
             const dataPoke = { data };
-    
+            
             this.setState({ dataPoke });
           })
           .catch(console.error);
@@ -40,19 +48,32 @@ export default class FichePokemon extends React.Component {
     componentDidUpdate(nextProps) {
       // Ici on verifie que la mise à jour concerne bien le champs city
       if (nextProps !== this.props.name) {
-        this.callAPI(nextProps);
+        this.callAPI(nextProps.name);
       }
     }
 
     render() {
         const { dataPoke } = this.state;
         const { name } = this.props;
+/*
+        // utilisation de Pokedex
+        P.getPokemonByName(name)
+        .then((dataPoke) => {
+          console.log(dataPoke);
+        })
+        .catch((error) => {
+          console.log('There was an ERROR: ', error);
+        });
+*/
         if (!dataPoke) return <p>Loading...</p>;
+        
         return (
           <div>
-              {dataPoke.map((dataPoke) => {
+              <p>{name}</p>
+              <Pokemon data={dataPoke}/>
+              {/*dataPoke.map((dataPoke) => {
                 return <Pokemon data={dataPoke} />;
-              })}
+              })*/}
           </div>
         );
       }

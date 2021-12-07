@@ -1,8 +1,5 @@
 import React from 'react';
-import axios from "axios";
 import '../index.css';
-
-const API_URL = "";
 
 export default class Pokemon extends React.Component {
     
@@ -14,10 +11,12 @@ export default class Pokemon extends React.Component {
         if (!data) return null;
         
         // get API data
-        const { name } = data.name;
-        const { height } = data.height;
-        const { weight } = data.weight;
-        const { type } = data.types[0].type;
+        const name = data.data.name;
+        const height = parseFloat(data.data.height)/10;
+        const weight = parseFloat(data.data.weight)/10;
+        const sprite = data.data.sprites.front_default;
+        const type = data.data.types[0].type.name;
+       
         
 
         // affichage des infos
@@ -34,6 +33,11 @@ export default class Pokemon extends React.Component {
                 </div>
                 <div class='infoPokemon'>
                     {`Type : ${type}`}
+                </div>
+                <div>
+                    <img
+                        src={sprite}
+                    />
                 </div>
             </div>
         );

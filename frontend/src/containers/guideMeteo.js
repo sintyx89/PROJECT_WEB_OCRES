@@ -41,14 +41,16 @@ export default class GuideMeteo extends React.Component {
     componentDidUpdate(nextProps) {
       // Ici on verifie que la mise à jour concerne bien le champs city
       if (nextProps !== this.props.city) {
-        this.callAPI(nextProps);
+        this.callAPI(nextProps.city);
       }
     }
 
     render() {
         const { forecast } = this.state;
         const { city } = this.props;
+
         if (!forecast) return <p>Loading...</p>;
+        
         return (
           <div>
             <h2 className="forecast-header">{city}</h2>
