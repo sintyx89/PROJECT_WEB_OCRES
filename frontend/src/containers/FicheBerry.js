@@ -49,7 +49,6 @@ export default class FicheBerry extends React.Component {
         
         return (
           <div>
-              <p>{name}</p>
               <Berry data={dataPoke}/>
           </div>
         );

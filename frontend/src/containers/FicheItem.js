@@ -49,7 +49,6 @@ export default class FicheItem extends React.Component {
         
         return (
           <div>
-              <p>{name}</p>
               <Item data={dataPoke}/>
           </div>
         );

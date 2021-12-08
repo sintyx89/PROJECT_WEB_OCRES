@@ -22,7 +22,7 @@ export default class Skill extends React.Component {
         // affichage des infos
 
         return (
-            <div class='berry container' id="pokemon">
+            <div class='berry' id="pokemon">
 
                 <div class='row'>
                     <div class='profileInfo col-auto'>

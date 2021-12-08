@@ -24,11 +24,14 @@ export default class App extends React.Component {
         
     }
     
+    handleChange= event => {
+        this.setState({ city: event.target.value });
+    };
 
     render() {
        
         return (
-            <div class='App container'>
+            <div class='App container-fluid'>
             <div class="row">
                 <aside class="col-sm-3" id="aside">
                     
@@ -56,7 +59,7 @@ export default class App extends React.Component {
                         </div>
                 </aside>
                 <div class="col-sm-9">
-                    <main class="container">
+                    <main class="container-fluid">
                         <Chemin/>
                     </main>
                 </div>

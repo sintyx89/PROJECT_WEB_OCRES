@@ -35,9 +35,8 @@ export default class Pokedex extends React.Component {
         let { pokemon, berry, item, skill } = this.state;
 
         return (
-            <div class='container'>
+            <div>
                 <div class='row'>
-
                     <div class='headshot headshot-pok'>
                         <div class="PokemonR ">
 
@@ -52,6 +51,7 @@ export default class Pokedex extends React.Component {
                                 <FichePokemon name={pokemon} />
                             </div>
                         </div>
+
                     </div>
                 </div>
 

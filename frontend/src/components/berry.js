@@ -17,7 +17,7 @@ export default class Berry extends React.Component {
 
         // affichage des infos
         return (
-            <div class='berry container' id='pokemon'>
+            <div class='berry' id='pokemon'>
                 <div class='row'>
                     <div class='profileInfo col-auto'>
                         {`Nom: ${name}`}
@@ -31,7 +31,7 @@ export default class Berry extends React.Component {
                         {`Nombre de récolte: ${max_harvest}`}
                     </div>
                     <div class='profileInfo col-auto' id="berrypui">
-                        {`Puissance de Natural Gift: ${natural_gift_power}`}
+                        {`Puissance : ${natural_gift_power}`}
 
 
                     </div>

@@ -20,7 +20,7 @@ export default class Pokemon extends React.Component {
         // affichage des infos
 
         return (
-            <div class='Pokemon container' id='pokemon'>
+            <div class='Pokemon' id='pokemon'>
                 <div class="row">
                     <div class="col">
                         <div class='row'>
@@ -39,14 +39,15 @@ export default class Pokemon extends React.Component {
                                 {`Type : ${type}`}
                             </div>
                         </div>
-                        <div class="col">
+                       
+                    </div>
+                    <div class="col-auto">
                             <div>
                                 <img
                                     src={sprite}
                                 />
                             </div>
                         </div>
-                    </div>
                 </div>
             </div>
 

@@ -39,8 +39,12 @@ export default class Home extends React.Component {
         // Revient a faire => this.setState({ selectedUser: selectedUser }); 
     }
 
+    handleChange= event => {
+        this.setState({ city: event.target.value });
+    };
+
     render() {
-        const { users, selectedUser, pokemons, city } = this.state;
+        let { users, selectedUser, pokemons, city } = this.state;
 
         return (
 

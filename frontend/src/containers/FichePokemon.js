@@ -49,7 +49,7 @@ export default class FichePokemon extends React.Component {
         
         return (
           <div>
-              <p>{name}</p>
+              
               <Pokemon data={dataPoke}/>
               {/*dataPoke.map((dataPoke) => {
                 return <Pokemon data={dataPoke} />;

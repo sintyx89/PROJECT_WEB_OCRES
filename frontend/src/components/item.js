@@ -38,7 +38,7 @@ export default class Item extends React.Component {
                             </div>
                         </div>
                     </div>
-                    <div class="col">
+                    <div class="col-auto">
                         <div>
                             <img
                                 src={sprite}
