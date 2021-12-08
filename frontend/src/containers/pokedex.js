@@ -57,7 +57,7 @@ export default class Pokedex extends React.Component {
                         onChange={ this.handleChangeBerry }
                     />
                     <div class='berryInfo'>
-                       {/*<FicheBerry name={ berry } />*/} 
+                       <FicheBerry name={ berry } /> 
                     </div>
                 </div>
 

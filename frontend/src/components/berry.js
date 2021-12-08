@@ -10,7 +10,7 @@ export default class Berry extends React.Component {
         if (!data) return null;
 
         // get API data
-        const name = data.name;
+        const name = data.data.name;
         const growth_time = data.data.growth_time;
         const max_harvest = data.data.max_harvest;
         const natural_gift_power = data.data.natural_gift_power;
