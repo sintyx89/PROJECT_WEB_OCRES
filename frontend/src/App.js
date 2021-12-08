@@ -15,56 +15,59 @@ import Chemin from './chemin';
 
 
 export default class App extends React.Component {
-    
-    constructor (props){
+
+    constructor(props) {
         super(props);
-        this.state={
+        this.state = {
             city: 'Paris'
         }
-        
+
     }
-    
-    handleChange= event => {
+
+    handleChange = event => {
         this.setState({ city: event.target.value });
     };
 
     render() {
-       
+
         return (
             <div class='App container-fluid'>
-            <div class="row">
-                <aside class="col-sm-3" id="aside">
-                    
-                    <h1 class='ecriture'>Poke<span class='base'>Ocres</span></h1>
-                    <ul class="nav nav-pills flex-column">
-                        <li class="nav-item">
-                        <Link class="nav-link " to="/">Home</Link>
-                        </li>
-                        <li class="nav-item">
-                        <Link class="nav-link " to="/parametres">Parametres</Link>
-                        </li>
-                    </ul>
-                    <div class="headshot headshot-meteo col-auto ">
-                            <div class='GuideMeteoGO'>
-                                <h2 class='textmeteo'> Méteo </h2>
-                                <input
-                                    id="meteoaside"
-                                    type="text"
-                                    name="Ville"
-                                    value={this.state.city}
-                                    onChange={this.handleChange}
-                                />
-                                <GuideMeteo city={this.state.city} />
+                <div class="row">
+                    <aside class="col-sm-3" id="aside">
+                        <div class="row">
+                            <h1 class='ecriture'>Poke<span class='base'>Ocres</span></h1>
+                            <ul class="nav nav-pills flex-column">
+                                <li class="nav-item">
+                                    <Link class="nav-link " to="/">Home</Link>
+                                </li>
+                                <li class="nav-item">
+                                    <Link class="nav-link " to="/parametres">Parametres</Link>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="headshot headshot-meteo col-auto " id="meteoaside">
+                                <div class='GuideMeteoGO'>
+                                    <h2 class='textmeteo'> Méteo </h2>
+                                    <input
+                                        id="meteoaside"
+                                        type="text"
+                                        name="Ville"
+                                        value={this.state.city}
+                                        onChange={this.handleChange}
+                                    />
+                                    <GuideMeteo city={this.state.city} />
+                                </div>
                             </div>
                         </div>
-                </aside>
-                <div class="col-sm-9">
-                    <main class="container-fluid">
-                        <Chemin/>
-                    </main>
+                    </aside>
+                    <div class="col-sm-9">
+                        <main class="container-fluid">
+                            <Chemin />
+                        </main>
+                    </div>
                 </div>
             </div>
-        </div>
         );
     }
 
