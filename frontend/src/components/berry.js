@@ -1,43 +1,43 @@
 import React from "react";
-
-const API_URL = "https://pokeapi.co/api/v2/berry/{id or name}/";
+import '../index.css';
 
 export default class Berry extends React.Component {
-    constructor(props) {
-        super(props);
-
-        this.state = {
-            name: 'name',
-            growth_time: '0',
-            max_harvest: '0',
-            natural_gift_power: '0'
-        }
-    }
 
     render() {
-        let berry = this.state;
+        // utilise la props (les data de l'API), les affiche, teste qu'elles sont récupéré
+        const { data } = this.props;
+        console.log("data", data);
+        if (!data) return null;
 
+        // get API data
+        const name = data.data.name;
+        const growth_time = data.data.growth_time;
+        const max_harvest = data.data.max_harvest;
+        const natural_gift_power = data.data.natural_gift_power;
+
+        // affichage des infos
         return (
             <div class='berry container' id='pokemon'>
                 <div class='row'>
                     <div class='profileInfo col-auto'>
-                        {`Nom: ${berry.name}`}
+                        {`Nom: ${name}`}
                     </div>
                     <div class='profileInfo col-auto'>
-                        {`Temps de pousse: ${berry.growth_time} h`}
+                        {`Temps de pousse: ${growth_time} h`}
                     </div>
                 </div>
                 <div class='row'>
                     <div class='profileInfo col-auto' id="nbrrec">
-                        {`Nombre de récolte: ${berry.max_harvest}`}
+                        {`Nombre de récolte: ${max_harvest}`}
                     </div>
                     <div class='profileInfo col-auto' id="berrypui">
-                        {`Puissance : ${berry.natural_gift_power}`}
+                        {`Puissance de Natural Gift: ${natural_gift_power}`}
+
+
                     </div>
                 </div>
-
             </div>
-        )
+        );
     }
 
 }
