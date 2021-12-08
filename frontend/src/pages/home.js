@@ -56,26 +56,14 @@ export default class Home extends React.Component {
 
                 <div class='mainContent'>
                     <div class="row justify-content-center">
-                        <div class="headshot headshot-dresseur col-5">
+                        <div class="headshot headshot-dresseur col-auto">
                             <div class='profilDresseur'>
                                 <h2> Profil dresseur </h2>
                                 <User user={users.find((user) => user.name === selectedUser)} />
                             </div>
                         </div>
 
-                        <div class="headshot headshot-meteo col-5 ">
-                            <div class='GuideMeteoGO'>
-                                <h2> Guide Méteo pour jouer à GO </h2>
-                                <input
-                                    id="meteo"
-                                    type="text"
-                                    name="Ville"
-                                    value={city}
-                                    onChange={this.handleChange}
-                                />
-                                <GuideMeteo city={city} />
-                            </div>
-                        </div>
+                        
 
                         <div class="col-auto">
                             <div class='pokedexInfo'>
