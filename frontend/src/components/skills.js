@@ -26,27 +26,27 @@ export default class Skill extends React.Component {
                     <div class='profileInfo col-auto'>
                         {`Nom: ${skill.name}`}
                     </div>
-                    <div class='profileInfo col-auto'>
+                    <div class='profileInfo col-auto' id="pui">
                         {`Power: ${skill.power}`}
 
                     </div>
                 </div>
                 <div class='row'>
-                    <div class='profileInfo col-auto'>
+                    <div class='profileInfo col-auto' id="type">
                         {`Type: ${skill.type}`}
 
                     </div>
-                    <div class='profileInfo col-auto'>
+                    <div class='profileInfo col-auto' id="pp">
                         {`PP: ${skill.pp}`}
 
                     </div>
                 </div>
                 <div class='row'>
-                    <div class='profileInfo col-auto'>
+                    <div class='profileInfo col-auto' id="precision">
                         {`Précision: ${skill.accuracy}`}
 
                     </div>
-                    <div class='profileInfo col-auto'>
+                    <div class='profileInfo col-auto' id="priorite">
                         {`Priorité: ${skill.priority}/8`}
                     </div>
                 </div>

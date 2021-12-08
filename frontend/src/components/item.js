@@ -28,10 +28,10 @@ export default class Item extends React.Component {
                     </div>
                 </div>
                 <div class='row'>
-                    <div class='profileInfo col-auto'>
+                    <div class='profileInfo col-auto' id="objatt">
                         {`Attribut: ${item.attributes}`}
                     </div>
-                    <div class='profileInfo col-auto'>
+                    <div class='profileInfo col-auto' id="objcat">
                         {`Catégorie: ${item.category}`}
                     </div>
                 </div>

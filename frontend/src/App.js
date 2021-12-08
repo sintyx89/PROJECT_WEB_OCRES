@@ -35,18 +35,17 @@ export default class App extends React.Component {
                     <h1 class='ecriture'>Poke<span class='base'>Ocres</span></h1>
                     <ul class="nav nav-pills flex-column">
                         <li class="nav-item">
-                        <Link class="nav-link active" to="/">Home</Link>
-                        <br></br>
+                        <Link class="nav-link " to="/">Home</Link>
                         </li>
                         <li class="nav-item">
-                        <Link class="nav-link active" to="/parametres">Parametres</Link>
+                        <Link class="nav-link " to="/parametres">Parametres</Link>
                         </li>
                     </ul>
-                    <div class="headshot headshot-meteo col ">
+                    <div class="headshot headshot-meteo col-auto ">
                             <div class='GuideMeteoGO'>
-                                <h2> Guide Méteo pour jouer à GO </h2>
+                                <h2 class='textmeteo'> Méteo </h2>
                                 <input
-                                    id="meteo"
+                                    id="meteoaside"
                                     type="text"
                                     name="Ville"
                                     value={this.state.city}

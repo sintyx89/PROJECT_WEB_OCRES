@@ -28,10 +28,10 @@ export default class Berry extends React.Component {
                     </div>
                 </div>
                 <div class='row'>
-                    <div class='profileInfo col-auto'>
+                    <div class='profileInfo col-auto' id="nbrrec">
                         {`Nombre de récolte: ${berry.max_harvest}`}
                     </div>
-                    <div class='profileInfo col-auto'>
+                    <div class='profileInfo col-auto' id="berrypui">
                         {`Puissance : ${berry.natural_gift_power}`}
                     </div>
                 </div>

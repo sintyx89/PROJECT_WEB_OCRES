@@ -24,15 +24,15 @@ export default class Pokemon extends React.Component {
                     <div class='infoPokemon col-auto'>
                         {`Nom : ${pokemon.name}`}
                     </div>
-                    <div class='infoPokemon col-auto'>
+                    <div class='infoPokemon col-auto' id="taille">
                         {`Taille : ${pokemon.height} m`}
                     </div>
                 </div>
                 <div class='row'>
-                    <div class='infoPokemon col-auto'>
+                    <div class='infoPokemon col-auto' id="poids">
                         {`Poids : ${pokemon.weight} kg`}
                     </div>
-                    <div class='infoPokemon col-auto'>
+                    <div class='infoPokemon col-auto' id="poktype">
                         {`Type : ${pokemon.type}`}
                     </div>
                 </div>
