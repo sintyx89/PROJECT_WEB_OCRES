@@ -24,6 +24,7 @@ export default class App extends React.Component {
 
     }
 
+
     handleChange = event => {
         this.setState({ city: event.target.value });
     };
@@ -63,7 +64,7 @@ export default class App extends React.Component {
                     </aside>
                     <div class="col-sm-9">
                         <main class="container-fluid">
-                            <Chemin />
+                            <Chemin option={this.changeOption}/>
                         </main>
                     </div>
                 </div>
