@@ -12,8 +12,10 @@ const mongoose = require('mongoose');
 
 var indexRouter = require("./routes/index");
 var usersRouter = require("./routes/users");
-const desseurRoutes = require('./routes/dresseur');
+// notre route pour dresseur
+var desseurRoutes = require('./routes/dresseur');
 
+// Express
 var app = express();
 
 // MangoDB
@@ -32,6 +34,7 @@ app.use(cookieParser());
 
 app.use("/", indexRouter);
 app.use("/users", usersRouter);
+// notre route pour dresseur
 app.use('/api/dresseur', desseurRoutes);
 
 
