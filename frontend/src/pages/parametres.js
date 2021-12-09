@@ -13,7 +13,7 @@ export default class Parametres extends React.Component {
        let option = this.props;
         return (
             <div>
-                <Button text='avec ou sans image' onClick= {this.option} />
+                <button class="btn btn-primary" onClick= {this.option}>Masquer Image</button>
             </div>
         );
     }
