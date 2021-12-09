@@ -1,3 +1,6 @@
+// models
+const Thing = require('./models/thing');
+// Express
 var express = require("express");
 var path = require("path");
 var cookieParser = require("cookie-parser");
@@ -9,6 +12,7 @@ const mongoose = require('mongoose');
 
 var indexRouter = require("./routes/index");
 var usersRouter = require("./routes/users");
+const desseurRoutes = require('./routes/dresseur');
 
 var app = express();
 
@@ -28,17 +32,31 @@ app.use(cookieParser());
 
 app.use("/", indexRouter);
 app.use("/users", usersRouter);
+app.use('/api/dresseur', desseurRoutes);
 
+
+
+
+/*
 // Acces à l'API depuis n'importe quelle origine
-app.use((req, res, next) => {
+app.use('/api/dresseur', (req, res, next) => {
     res.setHeader('Access-Control-Allow-Origin', '*');
     res.setHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content, Accept, Content-Type, Authorization');
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, PATCH, OPTIONS');
     next();
   });
-
+*/
+/*
 // GET
 app.get('/api/dresseur', (req, res, next) => {
+    // MangoDB
+    /*
+    Thing.find()
+    .then(things => res.status(200).json(things))
+    .catch(error => res.status(400).json({ error }));
+    */
+   // Dans le code
+   /*
     const dresseur = [
       {
         _id: '1',
@@ -57,13 +75,42 @@ app.get('/api/dresseur', (req, res, next) => {
     ];
     res.status(200).json(dresseur);
   });
-
+*/
+/*
+//GET by ID
+app.get('/api/dresseur/:id', (req, res, next) => {
+    Thing.findOne({ _id: req.params.id })
+      .then(thing => res.status(200).json(thing))
+      .catch(error => res.status(404).json({ error }));
+  });
+*/
+/*
 // POST
 app.post('/api/dresseur', (req, res, next) => {
-    console.log(req.body);
-    res.status(201).json({
-      message: 'Objet créé !'
+    delete req.body._id;
+    const thing = new Thing({
+        ...req.body
     });
+    thing.save()
+        .then(() => res.status(201).json({ message: 'Objet enregistré !'}))
+        .catch(error => res.status(400).json({ error }));
+});
+*/
+/*
+// PUT
+app.put('/api/dresseur/:id', (req, res, next) => {
+    Thing.updateOne({ _id: req.params.id }, { ...req.body, _id: req.params.id })
+      .then(() => res.status(200).json({ message: 'Objet modifié !'}))
+      .catch(error => res.status(400).json({ error }));
   });
+*/
+/*
+// DELETE
+app.delete('/api/dresseur/:id', (req, res, next) => {
+    Thing.deleteOne({ _id: req.params.id })
+      .then(() => res.status(200).json({ message: 'Objet supprimé !'}))
+      .catch(error => res.status(400).json({ error }));
+  });
+*/
 
 module.exports = app;
