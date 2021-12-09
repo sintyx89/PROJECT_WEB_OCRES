@@ -45,6 +45,7 @@ export default class Home extends React.Component {
 
     render() {
         let { users, selectedUser, pokemons, city } = this.state;
+        const option = this.props.option;
 
         return (
 
@@ -67,7 +68,7 @@ export default class Home extends React.Component {
 
                         <div class="col-auto">
                             <div class='pokedexInfo'>
-                                <Pokedex />
+                                <Pokedex option={option}/>
                             </div>
                         </div>
 

@@ -33,6 +33,7 @@ export default class Pokedex extends React.Component {
 
     render() {
         let { pokemon, berry, item, skill } = this.state;
+        const option = this.props.option;
 
         return (
             <div>
@@ -48,7 +49,7 @@ export default class Pokedex extends React.Component {
                                 onChange={this.handleChangePokemon}
                             />
                             <div class='pokemonInfo'>
-                                <FichePokemon name={pokemon} />
+                                <FichePokemon name={pokemon} option={option} />
                             </div>
                         </div>
 
