@@ -10,6 +10,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import { Link } from 'react-router-dom';
 import Chemin from './chemin';
+import Parametres from './pages/parametres';
 
 
 
@@ -19,9 +20,9 @@ export default class App extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            city: 'Paris'
+            city: 'Paris',
+            image : '1'
         }
-
     }
 
     handleChange = event => {
