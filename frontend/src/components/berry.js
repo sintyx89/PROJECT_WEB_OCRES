@@ -3,7 +3,7 @@ import '../index.css';
 
 export default class Berry extends React.Component {
 
-    render () {
+    render() {
         // utilise la props (les data de l'API), les affiche, teste qu'elles sont récupéré
         const { data } = this.props;
         console.log("data", data);
@@ -14,26 +14,30 @@ export default class Berry extends React.Component {
         const growth_time = data.data.growth_time;
         const max_harvest = data.data.max_harvest;
         const natural_gift_power = data.data.natural_gift_power;
-       
+
         // affichage des infos
         return (
-            <div class='berry'>
-                <div class='profileInfos'>
-                    <div class='profileInfo'>
+            <div class='berry' id='pokemon'>
+                <div class='row'>
+                    <div class='profileInfo col-auto'>
                         {`Nom: ${name}`}
                     </div>
-                    <div class='profileInfo'>
+                    <div class='profileInfo col-auto'>
                         {`Temps de pousse: ${growth_time} h`}
                     </div>
-                    <div class='profileInfo'>
+                </div>
+                <div class='row'>
+                    <div class='profileInfo col-auto' id="nbrrec">
                         {`Nombre de récolte: ${max_harvest}`}
                     </div>
-                    <div class='profileInfo'>
-                        {`Puissance de Natural Gift: ${natural_gift_power}`}
+                    <div class='profileInfo col-auto' id="berrypui">
+                        {`Puissance : ${natural_gift_power}`}
+
+
                     </div>
                 </div>
             </div>
-        )
+        );
     }
 
 }

@@ -49,7 +49,6 @@ export default class FicheSkill extends React.Component {
         
         return (
           <div>
-              <p>{name}</p>
               <Skill data={dataPoke}/>
           </div>
         );

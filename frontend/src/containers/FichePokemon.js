@@ -43,14 +43,14 @@ export default class FichePokemon extends React.Component {
 
     render() {
         const { dataPoke } = this.state;
-        const { name } = this.props;
+        const { name, option } = this.props;
 
         if (!dataPoke) return <p>Loading...</p>;
         
         return (
           <div>
-              <p>{name}</p>
-              <Pokemon data={dataPoke}/>
+              
+              <Pokemon data={dataPoke} option={option}/>
               {/*dataPoke.map((dataPoke) => {
                 return <Pokemon data={dataPoke} />;
               })*/}

@@ -27,10 +27,10 @@ export default class User extends React.Component {
                     <div class='profileInfo'>
                         {`Nom: ${user.surname}`}
                     </div>
-                    <div class='profileInfo'>
+                    <div class='profileInfo' id='ddn'>
                         {`Date de naissance: ${user.birthdate}`}
                     </div>
-                    <div class='profileInfo'>
+                    <div class='profileInfo' id='ndb'>
                         {`Nombre de Badge: ${user.badge}`}
                     </div>
                 </div>
