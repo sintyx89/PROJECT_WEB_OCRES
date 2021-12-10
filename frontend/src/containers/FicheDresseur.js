@@ -44,7 +44,7 @@ export default class FicheDresseur extends React.Component {
 
     render() {
         const { dataPoke } = this.state;
-
+        //test sur dataPoke
         if (!dataPoke) return <p>Loading...</p>;
         
         return (

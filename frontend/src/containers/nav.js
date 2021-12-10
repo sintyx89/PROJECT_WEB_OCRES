@@ -22,7 +22,9 @@ export default class Nav extends React.Component {
           .then(({ data }) => {
             console.log(data);
             // Recupere uniquement la propriété data
-            const dataPoke = { data };
+            const list = { data };
+            // on recuper la liste
+            const dataPoke = list.map();
             
             this.setState({ dataPoke });
           })
@@ -38,14 +40,17 @@ export default class Nav extends React.Component {
         const { users, changeUser } = this.props;
         // on recuper la liste des dresseurs
         const list = this.state.dataPoke;
+        //test sur list 
+        if (!list) return <p>Loading...</p>;
 
         return (
             <div class="container" id="listedresseur">
                 <div class="row">
-                    {   /*
+                    {   
                         (list.map((user) => <Button text={user.name} onClick={() => changeUser(user.name)} />))
-                        */
+                         /*
                         (users.map((user) => <Button text={user.name} onClick={() => changeUser(user.name)} />))
+                        */
                     }
                 </div>
             </div>)
