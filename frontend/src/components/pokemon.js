@@ -80,28 +80,30 @@ export default class Pokemon extends React.Component {
                     <div class="col-auto">
                         <div>
                             {
-                                option && <img src={sprite}/>
+                                option && <img src={sprite} />
                             }
-                            
+
                         </div>
                     </div>
                     <div class="row justify-content-center">
-                        <RadarChart
-                            outerRadius={100}
-                            width={440}
-                            height={250}
-                            data={info}
-                        >
-                            <PolarGrid stroke="#000"/>
-                            <PolarAngleAxis dataKey="subject" />
-                            <Radar
-                                name="Pokemon"
-                                dataKey="A"
-                                stroke="#160085"
-                                fill="#160085"
-                                fillOpacity={0.6}
-                            />
-                        </RadarChart>
+                        <div class="col-auto" id="imagepokemon">
+                            <RadarChart
+                                outerRadius={100}
+                                width={440}
+                                height={250}
+                                data={info}
+                            >
+                                <PolarGrid stroke="#000" />
+                                <PolarAngleAxis dataKey="subject" />
+                                <Radar
+                                    name="Pokemon"
+                                    dataKey="A"
+                                    stroke="#160085"
+                                    fill="#160085"
+                                    fillOpacity={0.6}
+                                />
+                            </RadarChart>
+                        </div>
                     </div>
                 </div>
             </div>
