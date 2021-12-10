@@ -1,10 +1,12 @@
 import React from 'react';
+import axios from "axios";
 import Button from '../components/button';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../index.css';
 
-export default class Parametres extends React.Component {
+const API_URL = "https://localhost:2000/routes/dresseur";
 
+export default class Parametres extends React.Component {
     option = () => {
         this.props.option();
     }
@@ -12,10 +14,23 @@ export default class Parametres extends React.Component {
     option2 = () => {
         this.props.option2();
     }
-
+/*
+    newDresseur = (id) => {
+        axios
+            .create(`${API_URL}/${id}/`)
+            .then(console.log('new dresseur'))
+            .catch(console.error);
+    }
+*/
     render() {
-        let option = this.props;
-        let option2 = this.props;
+        let { option, option2 } = this.props;
+        const dresseur = {
+            name: 'default',
+            first_name: 'default',
+            brith_date: '00/00/0000',
+            nbr_badge: '0'
+        }
+
         return (
             <div>
                 <div class="row justify-content-center">
@@ -42,19 +57,22 @@ export default class Parametres extends React.Component {
                         <input
                             type='text'
                             name='prenom'
+                            value={dresseur.first_name}
                         ></input>
                         <p>Entrez votre nom</p>
                         <input
                             type='text'
                             name='nom'
+                            value={dresseur.name}
                         ></input>
                         <p>Entrez votre date de naissance : JJ/MM/AAAA</p>
                         <input
                             type='text'
                             name='datedenaissance'
+                            value={dresseur.brith_date}
                         ></input>
                         <p></p>
-                        <button class="btn btn-primary">Enregistrer</button>
+                        <button class="btn btn-primary" /*onClick={this.newDresseur()}*/>Enregistrer</button>
 
                     </div>
                 </div>

@@ -4,9 +4,10 @@ import "../App.css";
 import '../index.css';
 import User from '../components/user';
 
-const API_URL = "https://localhost:2000/api/dresseur";
+const API_URL = "http://localhost:2000/api/dresseur";
+const API_KEY = "nrnd7LxUjHF8cSJyew4kFjjH6P1C82dnkxxHtcNWM1HHTJvovN6CCBGeHEZ4xZKj";
 
-export default class FicheBerry extends React.Component {
+export default class FicheDresseur extends React.Component {
     constructor(props) {
         super(props);
         this.state = {

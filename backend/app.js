@@ -32,23 +32,22 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
+
+// Acces à l'API depuis n'importe quelle origine
+app.use('/dresseur', (req, res, next) => {
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content, Accept, Content-Type, Authorization');
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, PATCH, OPTIONS');
+  next();
+});
+
 app.use("/", indexRouter);
 app.use("/users", usersRouter);
 // notre route pour dresseur
-app.use('/api/dresseur', desseurRoutes);
+app.use('/dresseur', desseurRoutes);
 
 
 
-
-/*
-// Acces à l'API depuis n'importe quelle origine
-app.use('/api/dresseur', (req, res, next) => {
-    res.setHeader('Access-Control-Allow-Origin', '*');
-    res.setHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content, Accept, Content-Type, Authorization');
-    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, PATCH, OPTIONS');
-    next();
-  });
-*/
 /*
 // GET
 app.get('/api/dresseur', (req, res, next) => {
@@ -57,9 +56,9 @@ app.get('/api/dresseur', (req, res, next) => {
     Thing.find()
     .then(things => res.status(200).json(things))
     .catch(error => res.status(400).json({ error }));
-    */
+    
    // Dans le code
-   /*
+   
     const dresseur = [
       {
         _id: '1',

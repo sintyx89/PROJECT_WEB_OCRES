@@ -16,23 +16,32 @@ export default class User extends React.Component {
     }
 
     render() {
-        const { user } = this.props;
+        // utilise la props (les data de l'API), les affiche, teste qu'elles sont récupéré
+        const { data } = this.props;
+        //console.log("data", data);
+        if (!data) return null;
+
+        // get API data
+        const name = data.name;
+        const first_name = data.first_name;
+        const birth_date = data.birth_date;
+        const nbr_badge = data.nbr_badge;
 
         return (
             <div class="row">
                 <div class='user'>
                     <div class='profileInfos'>
                         <div class='profileInfo'>
-                            {`Prenom: ${user.first_name}`}
+                            {`Prenom: ${first_name}`}
                         </div>
                         <div class='profileInfo'>
-                            {`Nom: ${user.name}`}
+                            {`Nom: ${name}`}
                         </div>
                         <div class='profileInfo' id='ddn'>
-                            {`Date de naissance: ${user.birth_date}`}
+                            {`Date de naissance: ${birth_date}`}
                         </div>
                         <div class='profileInfo' id='ndb'>
-                            {`Nombre de Badge: ${user.nbr_badge}`}
+                            {`Nombre de Badge: ${nbr_badge}`}
                         </div>
                     </div>
                 </div>

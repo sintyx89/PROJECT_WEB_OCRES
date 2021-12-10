@@ -40,7 +40,6 @@ exports.getOneThing = (req, res, next) => {
 
   exports.modifyThing = (req, res, next) => {
     const thing = new Thing({
-        _id: req.params.id,
         name: req.body.name,
         first_name: req.body.first_name,
         nbr_badge: req.body.nbr_badge,

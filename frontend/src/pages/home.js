@@ -62,12 +62,11 @@ export default class Home extends React.Component {
                         <div class="headshot headshot-dresseur col-auto">
                             <div class='profilDresseur'>
                                 <h2> Profil dresseur </h2>
-                                <FicheDresseur name={selectedUser} />
+                                <FicheDresseur id={'Margaux'} />
                                 {/*<User user={users.find((user) => user.name === selectedUser)} />*/}
                             </div>
                         </div>
-
-                        
+                    
 
                         <div class="col-auto">
                             <div class='pokedexInfo'>
