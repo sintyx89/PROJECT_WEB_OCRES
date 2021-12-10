@@ -246,3 +246,12 @@ code {
     color: white !important;
 }*/
 
+#pikachu {
+    width: 50%;
+    height: 50%;
+}
+
+.btn {
+    margin: 10px;
+}
+

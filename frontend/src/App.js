@@ -64,7 +64,7 @@ export default class App extends React.Component {
                     </aside>
                     <div class="col-sm-9">
                         <main class="container-fluid">
-                            <Chemin option={this.changeOption}/>
+                            <Chemin option={this.changeOption} option2={this.changeOption2}/>
                         </main>
                     </div>
                 </div>

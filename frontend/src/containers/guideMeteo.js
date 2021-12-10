@@ -5,7 +5,7 @@ import "../App.css";
 
 const API_URL = "http://api.openweathermap.org/data/2.5/forecast";
 const API_KEY = "768a35a09a1701be84498950a95e7cf5";
-const API_KEY2 = "44df947c43958d2ce1cb7a4ba9123b2a8";
+const API_KEY2 = "4081444b7b90198136fefe6ed4ccf35b";
 
 export default class GuideMeteo extends React.Component {
     constructor(props) {

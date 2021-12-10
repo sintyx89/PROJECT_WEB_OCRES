@@ -43,13 +43,13 @@ export default class FicheItem extends React.Component {
 
     render() {
         const { dataPoke } = this.state;
-        const { name } = this.props;
+        const { name, option } = this.props;
 
         if (!dataPoke) return <p>Loading...</p>;
         
         return (
           <div>
-              <Item data={dataPoke}/>
+              <Item data={dataPoke} option={option}/>
           </div>
         );
       }

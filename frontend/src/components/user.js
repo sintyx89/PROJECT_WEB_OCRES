@@ -15,26 +15,29 @@ export default class User extends React.Component {
         }
     }
 
-    render () {
-        const {user} = this.props;
+    render() {
+        const { user } = this.props;
 
         return (
-            <div class='user'>
-                <div class='profileInfos'>
-                    <div class='profileInfo'>
-                        {`Prenom: ${user.first_name}`}
-                    </div>
-                    <div class='profileInfo'>
-                        {`Nom: ${user.name}`}
-                    </div>
-                    <div class='profileInfo' id='ddn'>
-                        {`Date de naissance: ${user.birth_date}`}
-                    </div>
-                    <div class='profileInfo' id='ndb'>
-                        {`Nombre de Badge: ${user.nbr_badge}`}
+            <div class="row">
+                <div class='user'>
+                    <div class='profileInfos'>
+                        <div class='profileInfo'>
+                            {`Prenom: ${user.first_name}`}
+                        </div>
+                        <div class='profileInfo'>
+                            {`Nom: ${user.name}`}
+                        </div>
+                        <div class='profileInfo' id='ddn'>
+                            {`Date de naissance: ${user.birth_date}`}
+                        </div>
+                        <div class='profileInfo' id='ndb'>
+                            {`Nombre de Badge: ${user.nbr_badge}`}
+                        </div>
                     </div>
                 </div>
             </div>
+
         )
     }
 

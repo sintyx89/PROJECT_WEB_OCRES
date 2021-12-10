@@ -34,6 +34,7 @@ export default class Pokedex extends React.Component {
     render() {
         let { pokemon, berry, item, skill } = this.state;
         const option = this.props.option;
+        const option2 = this.props.option2;
 
         return (
             <div>
@@ -86,7 +87,7 @@ export default class Pokedex extends React.Component {
                                 onChange={this.handleChangeItem}
                             />
                             <div class='itemInfo'>
-                                <FicheItem name={item} />
+                                <FicheItem name={item} option={option2}/>
                             </div>
                         </div>
                     </div>

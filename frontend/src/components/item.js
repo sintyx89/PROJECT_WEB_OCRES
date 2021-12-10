@@ -5,7 +5,7 @@ export default class Item extends React.Component {
 
     render() {
         // utilise la props (les data de l'API), les affiche, teste qu'elles sont récupéré
-        const { data } = this.props;
+        const { data, option } = this.props;
         console.log("data", data);
         if (!data) return null;
 
@@ -40,9 +40,9 @@ export default class Item extends React.Component {
                     </div>
                     <div class="col-auto">
                         <div>
-                            <img
-                                src={sprite}
-                            />
+                            {
+                                option && <img src={sprite} />
+                            }
                         </div>
                     </div>
                 </div>
