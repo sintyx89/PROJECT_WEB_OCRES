@@ -2,6 +2,7 @@ import React from 'react';
 import axios from "axios";
 import "../App.css";
 import '../index.css';
+import User from '../components/user';
 
 const API_URL = "https://localhost:2000/api/dresseur";
 
@@ -47,7 +48,7 @@ export default class FicheBerry extends React.Component {
         
         return (
           <div>
-              
+              <User data={dataPoke}/>
           </div>
         );
       }

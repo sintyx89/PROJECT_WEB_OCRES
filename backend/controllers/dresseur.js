@@ -24,7 +24,7 @@ exports.createThing = (req, res, next) => {
 
 exports.getOneThing = (req, res, next) => {
     Thing.findOne({
-      _id: req.params.id
+      first_name: req.params.id
     }).then(
       (thing) => {
         res.status(200).json(thing);
@@ -62,7 +62,7 @@ exports.getOneThing = (req, res, next) => {
   };
   
   exports.deleteThing = (req, res, next) => {
-    Thing.deleteOne({_id: req.params.id}).then(
+    Thing.deleteOne({first_name: req.params.id}).then(
       () => {
         res.status(200).json({
           message: 'Deleted!'

@@ -22,16 +22,16 @@ export default class User extends React.Component {
             <div class='user'>
                 <div class='profileInfos'>
                     <div class='profileInfo'>
-                        {`Prenom: ${user.name}`}
+                        {`Prenom: ${user.first_name}`}
                     </div>
                     <div class='profileInfo'>
-                        {`Nom: ${user.surname}`}
+                        {`Nom: ${user.name}`}
                     </div>
                     <div class='profileInfo' id='ddn'>
-                        {`Date de naissance: ${user.birthdate}`}
+                        {`Date de naissance: ${user.birth_date}`}
                     </div>
                     <div class='profileInfo' id='ndb'>
-                        {`Nombre de Badge: ${user.badge}`}
+                        {`Nombre de Badge: ${user.nbr_badge}`}
                     </div>
                 </div>
             </div>
