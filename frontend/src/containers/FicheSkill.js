@@ -43,7 +43,6 @@ export default class FicheSkill extends React.Component {
 
     render() {
         const { dataPoke } = this.state;
-        const { name } = this.props;
 
         if (!dataPoke) return <p>Loading...</p>;
         

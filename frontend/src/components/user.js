@@ -6,7 +6,7 @@ const API_URL = "";
 export default class User extends React.Component {
     constructor(props) {
         super(props);
-
+        // pour l'affichage par défaut
         this.state = {
             name: 'prenom',
             surname: 'nom',

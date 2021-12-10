@@ -62,8 +62,10 @@ export default class Home extends React.Component {
                         <div class="headshot headshot-dresseur col-auto">
                             <div class='profilDresseur'>
                                 <h2> Profil dresseur </h2>
-                                <FicheDresseur id={'Margaux'} />
-                                {/*<User user={users.find((user) => user.name === selectedUser)} />*/}
+                                <FicheDresseur id={selectedUser} />
+                                {/* version 'en dur'
+                                <User user={users.find((user) => user.name === selectedUser)} />
+                                */}
                             </div>
                         </div>
                     
