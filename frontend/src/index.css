@@ -148,6 +148,12 @@ code {
     }
 }
 
+@media screen and (max-width:690px) {
+    #imagepokemon  {
+        display: none;
+    }
+}
+
 /*@media screen and (max-width:1200px) {
     #ndb, #ddn {
         display: none;
