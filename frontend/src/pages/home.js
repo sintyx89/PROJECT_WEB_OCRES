@@ -3,6 +3,7 @@ import User from '../components/user';
 import Nav from '../containers/nav';
 import GuideMeteo from '../containers/guideMeteo';
 import Pokedex from '../containers/pokedex';
+import FicheDresseur from '../containers/FicheDresseur';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -61,7 +62,8 @@ export default class Home extends React.Component {
                         <div class="headshot headshot-dresseur col-auto">
                             <div class='profilDresseur'>
                                 <h2> Profil dresseur </h2>
-                                <User user={users.find((user) => user.name === selectedUser)} />
+                                <FicheDresseur name={selectedUser} />
+                                {/*<User user={users.find((user) => user.name === selectedUser)} />*/}
                             </div>
                         </div>
 
